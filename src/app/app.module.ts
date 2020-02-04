@@ -10,6 +10,7 @@ import { CommunicationsComponent } from './components/communications/communicati
 import { TodoEntryComponent } from './components/communications/todo-entry/todo-entry.component';
 import { TodoListComponent } from './components/communications/todo-list/todo-list.component';
 import { TodoService } from './components/communications/todo.service';
+import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TodoService } from './components/communications/todo.service';
     NavComponent,
     CommunicationsComponent,
     TodoEntryComponent,
-    TodoListComponent
+    TodoListComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
