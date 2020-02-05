@@ -26,5 +26,5 @@ const { selectAll: selectAllListItems } = fromList.adapter.getSelectors(selectLi
 
 // TODO ShopingItemModel[]
 export const selectShoppingItemModel = createSelector(selectAllListItems,
-  (items) => items as ShoppingItemModel[]
+  (items) => items.map(item => ({ ...item, isTemporary: item.id.toString().startsWith('T') } as ShoppingItemModel))
 );
