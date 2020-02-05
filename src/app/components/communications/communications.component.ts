@@ -13,6 +13,7 @@ export class CommunicationsComponent implements OnInit {
   //   { description: 'Clean Garage', completed: false },
   //   { description: 'Wash windows', completed: true }
   // ];
+  listHeader = 'Your Super Awesome Todo List';
   todoList$: Observable<TodoItem[]>;
   constructor(private service: TodoService) { }
 

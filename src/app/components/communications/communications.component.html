@@ -4,5 +4,7 @@
 <section>
   <app-todo-entry (itemAdded)="onItemAdded($event)"></app-todo-entry>
 
-  <app-todo-list [list]="todoList$ | async"></app-todo-list>
+  <app-todo-list [header]="listHeader"
+                 [list]="todoList$ | async">
+  </app-todo-list>
 </section>
