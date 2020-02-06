@@ -5,6 +5,7 @@ import { TipCalculatorComponent } from './components/tip-calculator/tip-calculat
 import { CommunicationsComponent } from './components/communications/communications.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { ShoppingComponent } from './features/shopping/shopping.component';
+import { MyDigitalLibraryComponent } from './features/my-digital-library/my-digital-library.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'communications',
     component: CommunicationsComponent
+  },
+  {
+    path: 'library',
+    component: MyDigitalLibraryComponent
   },
   {
     path: '**',
