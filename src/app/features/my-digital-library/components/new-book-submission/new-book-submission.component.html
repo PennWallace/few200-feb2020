@@ -4,15 +4,16 @@
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2 sr-only"
-             for="book-format">Book Format</label>
+             for="format">Book Format</label>
       <select class="custom-select mr-sm-2"
-              id="book-format"
+              id="format"
               #format>
         <option selected>Format...</option>
         <option value="Hardcover">Hardcover</option>
         <option value="Paperback">Paperback</option>
         <option value="E-Book">E-Book</option>
       </select>
+
     </div>
     <input type="text"
            class="form-control"
@@ -29,9 +30,18 @@
       </div>
       <div class="col">
         <input type="text"
+               id="last"
                class="form-control"
                placeholder="Last name"
+               required
+               minlength="1"
                #last>
+      </div>
+      <div *ngIf="last.invalid && (last.dirty || last.touched)"
+           class="alert alert-danger">
+        <div *ngIf="last.errors.minlength">
+          Please enter an Author Name (If the author goes by one name enter it into the Last Name field)
+        </div>
       </div>
     </div>
     <br>

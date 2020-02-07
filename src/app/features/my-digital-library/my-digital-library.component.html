@@ -13,7 +13,7 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <app-library-list></app-library-list>
+            <app-library-list [model]="library$ | async"></app-library-list>
           </div>
         </div>
       </div>
