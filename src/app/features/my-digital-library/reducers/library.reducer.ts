@@ -21,12 +21,12 @@ export const adapter = createEntityAdapter<LibraryBookEntity>();
 const initialState: LibraryState = {
   ids: ['1', '2'],
   entities: {
-    1: { id: '1', title: 'Shampoo', author: { firstname: 'Test', lastname: 'last' }, format: 'hardcover' },
-    2: { id: '3', title: 'Bread', author: { firstname: 'Test', lastname: 'last' }, format: 'hardcover' },
+    1: { id: '1', title: `Cat's Cradle`, author: { firstname: 'Kurt', lastname: 'Vonnegut' }, format: 'Paperback' },
+    2: { id: '2', title: 'Fight Club', author: { firstname: 'Chuck', lastname: 'Palahniuk' }, format: 'Paperback' },
   }
 };
 
-// adapter.getInitialState();
+adapter.getInitialState();
 
 
 const reducerFunction = createReducer(
