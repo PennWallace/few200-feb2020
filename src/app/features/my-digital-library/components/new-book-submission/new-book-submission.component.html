@@ -17,33 +17,31 @@
       </select>
 
     </div>
-    <input type="text"
-           class="form-control"
+    <input class="form-control"
            name="title"
            placeholder="Book Title"
            required
            minlength="1"
            [(ngModel)]="model.title"
-           #title="ngModel">
-    <div *ngIf="title.invalid && (title.dirty || title.touched)"
+           #title
+           #titlemod="ngModel">
+    <div *ngIf="titlemod.invalid && (titlemod.dirty || titlemod.touched)"
          class="alert alert-danger">
-      <div *ngIf="title.errors.required">
+      <div *ngIf="titlemod.errors.required">
         Please enter an Title for the book <br>(If the work is untitled use "Untitled" as the title)
       </div>
     </div>
 
     <div class="form-row">
       <div class="col">
-        <input type="text"
-               class="form-control"
+        <input class=" form-control"
                name="first"
                placeholder="First name"
                [(ngModel)]="model.first"
                #first>
       </div>
       <div class="col">
-        <input type="text"
-               id="last"
+        <input id="last"
                name="last"
                class="form-control"
                placeholder="Last name"
@@ -51,14 +49,15 @@
                minlength="1"
                appForbiddenName="Last name"
                [(ngModel)]="model.last"
-               #last="ngModel">
+               #last
+               #lastmod="ngModel">
       </div>
-      <div *ngIf="last.invalid && (last.dirty || last.touched)"
+      <div *ngIf="lastmod.invalid && (lastmod.dirty || lastmod.touched)"
            class="alert alert-danger">
-        <div *ngIf="last.errors.required">
+        <div *ngIf="lastmod.errors.required">
           Please enter an Author Name (If the author goes by one name enter it into the Last Name field)
         </div>
-        <div *ngIf="last.errors.minlength">
+        <div *ngIf="lastmod.errors.minlength">
           Please enter an Author Name (If the author goes by one name enter it into the Last Name field)
         </div>
       </div>

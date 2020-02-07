@@ -13,7 +13,7 @@ export class NewBookSubmissionComponent implements OnInit {
 
   formats = ['Hardcover', 'Paperback', 'e-Book'];
 
-  model = new Librarybook('', ``, '', 'Format', '');
+  model = new Librarybook('', '', '', '', '');
 
   constructor(private store: Store<LibraryBookState>) { }
 
@@ -24,7 +24,7 @@ export class NewBookSubmissionComponent implements OnInit {
   ngOnInit() {
 
   }
-  addBook(titleEl: HTMLInputElement, firstEl: HTMLInputElement, lastEl: HTMLInputElement, formatEl: HTMLInputElement) {
+  addBook(titleEl: HTMLInputElement, firstEl: HTMLInputElement, lastEl: HTMLInputElement, formatEl: HTMLSelectElement) {
     // todo: Dispatch an action
     const title = titleEl.value;
     const firstname = firstEl.value;
